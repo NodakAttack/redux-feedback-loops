@@ -17,10 +17,18 @@ const feelings = (state = 0, action) => {
     return state;
 }
 
+const understanding = (state = 0, action) => {
+    if (action.type === 'PUT_UNDERSTANDING'){
+        return action.payload;
+    }
+    return state;
+}
+
 
 const storeInstance = createStore
 (combineReducers({
     feelings,
+    understanding,
 
 }), applyMiddleware(logger));
 

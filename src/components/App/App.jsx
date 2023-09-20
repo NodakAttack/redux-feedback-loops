@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 // components
 import Feelings from "../Feelings/Feelings";
+import Understanding from "../Understanding/Understanding";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         </header>
         <Route exact path="/">
           <Feelings />
+        </Route>
+        <Route exact path="/understanding">
+          <Understanding />
         </Route>
       </Router>
     </div>

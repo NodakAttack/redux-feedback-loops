@@ -12,7 +12,7 @@ const Feelings = () => {
   };
 
   const next = () => {
-    history.push('/')
+    history.push('/understanding')
   }
 
   return (
