@@ -10,7 +10,7 @@ const Comments = () => {
 
   const next = () => {
     dispatch({ type: "PUT_COMMENTS", payload: inputRef.current.value });
-    history.push("/");
+    history.push("/review");
   };
 
   return (
