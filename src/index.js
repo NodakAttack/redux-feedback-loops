@@ -20,6 +20,7 @@ const feelings = (state = 0, action) => {
 
 const storeInstance = createStore
 (combineReducers({
+    feelings,
 
 }), applyMiddleware(logger));
 
