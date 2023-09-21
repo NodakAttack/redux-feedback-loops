@@ -12,14 +12,21 @@ const Feelings = () => {
   };
 
   const next = () => {
-    history.push('/understanding')
-  }
+    history.push("/understanding");
+  };
 
   return (
     <>
       <h1>How are you feeling today? 1-5</h1>
       <div>
-        <input type="number" min={1} max={5}  value={feelingRating} onChange={handleChange}/>
+        {/* using min/max to make sure number is between 1-5 */}
+        <input
+          type="number"
+          min={1}
+          max={5}
+          value={feelingRating}
+          onChange={handleChange}
+        />
         <button onClick={next}>Next</button>
       </div>
     </>

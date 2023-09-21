@@ -9,6 +9,7 @@ const Understanding = () => {
   const inputRef = useRef(null);
 
   const next = () => {
+    // input logic to check if number is between 1-5
     if (inputRef.current.value >= 1 && inputRef.current.value <= 5) {
       dispatch({ type: "PUT_UNDERSTANDING", payload: inputRef.current.value });
       history.push("/support");
