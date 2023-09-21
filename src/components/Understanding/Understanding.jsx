@@ -9,8 +9,12 @@ const Understanding = () => {
   const inputRef = useRef(null);
 
   const next = () => {
-    dispatch({ type: "PUT_UNDERSTANDING", payload: inputRef.current.value });
-    history.push("/support");
+    if (inputRef.current.value >= 1 && inputRef.current.value <= 5) {
+      dispatch({ type: "PUT_UNDERSTANDING", payload: inputRef.current.value });
+      history.push("/support");
+    } else {
+      alert("enter a number between 1-5");
+    }
   };
 
   return (
