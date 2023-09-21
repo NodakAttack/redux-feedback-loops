@@ -19,7 +19,7 @@ const Feelings = () => {
     <>
       <h1>How are you feeling today? 1-5</h1>
       <div>
-        <input type="number" value={feelingRating} onChange={handleChange}/>
+        <input type="number" min={1} max={5}  value={feelingRating} onChange={handleChange}/>
         <button onClick={next}>Next</button>
       </div>
     </>
