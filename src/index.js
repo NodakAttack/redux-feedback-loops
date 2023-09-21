@@ -13,6 +13,8 @@ import { Provider } from "react-redux";
 const feelings = (state = 0, action) => {
     if (action.type === 'PUT_FEELINGS'){
         return action.payload;
+    } else if (action.type === "CLEAR"){
+        return 0;
     }
     return state;
 }
@@ -20,6 +22,8 @@ const feelings = (state = 0, action) => {
 const understanding = (state = 0, action) => {
     if (action.type === 'PUT_UNDERSTANDING'){
         return action.payload;
+    } else if (action.type === "CLEAR"){
+        return 0;
     }
     return state;
 }
@@ -27,6 +31,8 @@ const understanding = (state = 0, action) => {
 const support = (state = 0, action) => {
     if (action.type === 'PUT_SUPPORT'){
         return action.payload;
+    } else if (action.type === "CLEAR"){
+        return 0;
     }
     return state;
 }
@@ -34,6 +40,8 @@ const support = (state = 0, action) => {
 const comments = (state = '', action) => {
     if (action.type === 'PUT_COMMENTS'){
         return action.payload;
+    } else if (action.type === "CLEAR"){
+        return '';
     }
     return state;
 }
