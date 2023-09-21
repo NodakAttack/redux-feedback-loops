@@ -13,9 +13,14 @@ const Review = () => {
 
     const handleSubmit = () => {
         axios
-        .get('/feedbackloop')
+        .post('/feedbackloop', {
+            feeling: feelings,
+            understanding: understanding,
+            support: support,
+            comments: comments,
+        })
         .then((response) => {
-            history.push('/')
+            history.push('/submit')
             console.log(response.data);
         })
         .catch((error) => {
